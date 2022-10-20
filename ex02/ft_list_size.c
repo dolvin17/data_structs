@@ -6,7 +6,7 @@
 /*   By: ghuertas <ghuertas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:03:29 by ghuertas          #+#    #+#             */
-/*   Updated: 2022/10/20 15:29:49 by ghuertas         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:15:04 by ghuertas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ int	main(void)
 
 	new_list = ft_create_elem("I love Karol G\n");
 	ft_list_size(new_list);
-	printf("%d\n", ft_list_size(new_list));
+	printf("%d\n", ft_list_size(new_list));//print 2 elements
 	return (0);
 }
