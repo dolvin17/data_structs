@@ -6,7 +6,7 @@
 /*   By: ghuertas <ghuertas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:03:29 by ghuertas          #+#    #+#             */
-/*   Updated: 2022/10/20 16:15:04 by ghuertas         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:55:29 by ghuertas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 t_list	*ft_create_elem(void *data)
 {
 	t_list	*new;
-	t_list	*second_elem;
 
-	new = malloc(sizeof(t_list));
-	second_elem = malloc(sizeof(t_list));
-	if (!new || !second_elem)
+	new = malloc(sizeof(t_list));//Reserve space for new element
+	if (!new)
 		return (NULL);
-	new->data = data;
-	new->next = second_elem;
-	second_elem->next = NULL;
-	return (new);
+	new->data = data;//pointing new element to struct
+	new->next = NULL;//seting next position to NULL
+	return (new);//return new element created
 }
 
 int	ft_list_size(t_list *begin_list)
